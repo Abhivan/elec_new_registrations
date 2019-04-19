@@ -1,0 +1,359 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" xmlns:is="http://www.electralink.co.uk/schemas/DTC/DataItems" xmlns:ds="http://www.electralink.co.uk/schemas/DTC/D0018001" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/D0018001">
+	<xs:import schemaLocation="Header.xsd" namespace="http://www.electralink.co.uk/schemas/Header"></xs:import>
+	<xs:import schemaLocation="DataItems.xsd" namespace="http://www.electralink.co.uk/schemas/DTC/DataItems"></xs:import>
+	<xs:complexType name="DataFlow">
+		<xs:sequence>
+			<xs:element name="GZPD_0780" type="ds:G351100" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GRDT_0781" type="ds:G351200" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GHDR_0782" type="ds:G351300" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GGSP_0783" type="ds:G351400" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="G351100">
+		<xs:sequence>
+			<xs:element name="J0073" type="is:J0073" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1086" type="is:J1086" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1087" type="is:J1087" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="true"/>
+	</xs:complexType>
+	<xs:complexType name="G351200">
+		<xs:sequence>
+			<xs:element name="J1089" type="is:J1089" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1090" type="is:J1090" minOccurs="2" maxOccurs="2"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351300">
+		<xs:sequence>
+			<xs:element name="J1091" type="is:J1091" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1092" type="is:J1092" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351400">
+		<xs:sequence>
+			<xs:element name="J0066" type="is:J0066" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0062" type="is:J0062" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0068" type="is:J0068" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0077" type="is:J0077" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0875" type="is:J0875" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GPCL_0784" type="ds:G351500" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351500">
+		<xs:sequence>
+			<xs:element name="J0071" type="is:J0071" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GPFL_0785" type="ds:G351600" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="GSSC_0787" type="ds:G351800" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351600">
+		<xs:sequence>
+			<xs:element name="J0072" type="is:J0072" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GBPP_0786" type="ds:G351700" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351700">
+		<xs:sequence>
+			<xs:element name="J0069" type="is:J0069" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1362" type="is:J1362" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1363" type="is:J1363" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1364" type="is:J1364" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1365" type="is:J1365" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1366" type="is:J1366" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1367" type="is:J1367" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1368" type="is:J1368" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1369" type="is:J1369" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1370" type="is:J1370" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1371" type="is:J1371" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1372" type="is:J1372" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1373" type="is:J1373" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1374" type="is:J1374" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1375" type="is:J1375" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1376" type="is:J1376" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1377" type="is:J1377" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1378" type="is:J1378" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1379" type="is:J1379" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1380" type="is:J1380" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1381" type="is:J1381" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1382" type="is:J1382" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1383" type="is:J1383" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1384" type="is:J1384" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1385" type="is:J1385" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1386" type="is:J1386" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1387" type="is:J1387" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1388" type="is:J1388" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1389" type="is:J1389" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1390" type="is:J1390" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1391" type="is:J1391" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1392" type="is:J1392" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1393" type="is:J1393" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1394" type="is:J1394" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1395" type="is:J1395" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1396" type="is:J1396" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1397" type="is:J1397" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1398" type="is:J1398" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1399" type="is:J1399" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1400" type="is:J1400" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1401" type="is:J1401" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1402" type="is:J1402" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1403" type="is:J1403" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1404" type="is:J1404" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1405" type="is:J1405" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1406" type="is:J1406" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1407" type="is:J1407" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1408" type="is:J1408" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1409" type="is:J1409" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1410" type="is:J1410" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351800">
+		<xs:sequence>
+			<xs:element name="J0076" type="is:J0076" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GCPP_0788" type="ds:G351900" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="GVMR_0789" type="ds:G352000" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G351900">
+		<xs:sequence>
+			<xs:element name="J0876" type="is:J0876" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0877" type="is:J0877" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1460" type="is:J1460" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1509" type="is:J1509" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1461" type="is:J1461" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1510" type="is:J1510" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1462" type="is:J1462" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1511" type="is:J1511" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1463" type="is:J1463" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1512" type="is:J1512" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1464" type="is:J1464" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1513" type="is:J1513" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1465" type="is:J1465" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1514" type="is:J1514" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1466" type="is:J1466" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1515" type="is:J1515" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1467" type="is:J1467" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1516" type="is:J1516" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1468" type="is:J1468" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1517" type="is:J1517" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1469" type="is:J1469" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1518" type="is:J1518" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1470" type="is:J1470" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1519" type="is:J1519" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1471" type="is:J1471" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1520" type="is:J1520" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1472" type="is:J1472" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1521" type="is:J1521" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1473" type="is:J1473" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1522" type="is:J1522" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1474" type="is:J1474" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1523" type="is:J1523" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1475" type="is:J1475" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1524" type="is:J1524" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1476" type="is:J1476" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1525" type="is:J1525" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1477" type="is:J1477" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1526" type="is:J1526" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1478" type="is:J1478" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1527" type="is:J1527" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1479" type="is:J1479" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1528" type="is:J1528" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1480" type="is:J1480" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1529" type="is:J1529" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1481" type="is:J1481" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1530" type="is:J1530" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1482" type="is:J1482" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1531" type="is:J1531" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1483" type="is:J1483" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1532" type="is:J1532" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1484" type="is:J1484" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1533" type="is:J1533" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1485" type="is:J1485" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1534" type="is:J1534" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1486" type="is:J1486" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1535" type="is:J1535" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1487" type="is:J1487" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1536" type="is:J1536" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1488" type="is:J1488" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1537" type="is:J1537" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1489" type="is:J1489" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1538" type="is:J1538" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1490" type="is:J1490" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1539" type="is:J1539" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1491" type="is:J1491" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1540" type="is:J1540" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1492" type="is:J1492" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1541" type="is:J1541" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1493" type="is:J1493" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1542" type="is:J1542" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1494" type="is:J1494" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1543" type="is:J1543" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1495" type="is:J1495" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1544" type="is:J1544" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1496" type="is:J1496" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1545" type="is:J1545" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1497" type="is:J1497" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1546" type="is:J1546" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1498" type="is:J1498" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1547" type="is:J1547" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1499" type="is:J1499" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1548" type="is:J1548" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1500" type="is:J1500" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1549" type="is:J1549" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1501" type="is:J1501" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1550" type="is:J1550" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1502" type="is:J1502" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1551" type="is:J1551" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1503" type="is:J1503" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1552" type="is:J1552" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1504" type="is:J1504" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1553" type="is:J1553" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1505" type="is:J1505" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1554" type="is:J1554" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1506" type="is:J1506" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1555" type="is:J1555" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1507" type="is:J1507" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1556" type="is:J1556" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1508" type="is:J1508" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1557" type="is:J1557" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G352000">
+		<xs:sequence>
+			<xs:element name="J0078" type="is:J0078" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="GPPC_0790" type="ds:G352100" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G352100">
+		<xs:sequence>
+			<xs:element name="J0069" type="is:J0069" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0070" type="is:J0070" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1362" type="is:J1362" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1411" type="is:J1411" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1363" type="is:J1363" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1412" type="is:J1412" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1364" type="is:J1364" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1413" type="is:J1413" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1365" type="is:J1365" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1414" type="is:J1414" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1366" type="is:J1366" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1415" type="is:J1415" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1367" type="is:J1367" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1416" type="is:J1416" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1368" type="is:J1368" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1417" type="is:J1417" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1369" type="is:J1369" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1418" type="is:J1418" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1370" type="is:J1370" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1419" type="is:J1419" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1371" type="is:J1371" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1420" type="is:J1420" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1372" type="is:J1372" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1421" type="is:J1421" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1373" type="is:J1373" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1422" type="is:J1422" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1374" type="is:J1374" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1423" type="is:J1423" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1375" type="is:J1375" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1424" type="is:J1424" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1376" type="is:J1376" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1425" type="is:J1425" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1377" type="is:J1377" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1426" type="is:J1426" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1378" type="is:J1378" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1427" type="is:J1427" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1379" type="is:J1379" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1428" type="is:J1428" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1380" type="is:J1380" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1429" type="is:J1429" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1381" type="is:J1381" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1430" type="is:J1430" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1382" type="is:J1382" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1431" type="is:J1431" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1383" type="is:J1383" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1432" type="is:J1432" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1384" type="is:J1384" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1433" type="is:J1433" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1385" type="is:J1385" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1434" type="is:J1434" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1386" type="is:J1386" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1435" type="is:J1435" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1387" type="is:J1387" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1436" type="is:J1436" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1388" type="is:J1388" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1437" type="is:J1437" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1389" type="is:J1389" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1438" type="is:J1438" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1390" type="is:J1390" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1439" type="is:J1439" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1391" type="is:J1391" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1440" type="is:J1440" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1392" type="is:J1392" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1441" type="is:J1441" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1393" type="is:J1393" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1442" type="is:J1442" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1394" type="is:J1394" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1443" type="is:J1443" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1395" type="is:J1395" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1444" type="is:J1444" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1396" type="is:J1396" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1445" type="is:J1445" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1397" type="is:J1397" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1446" type="is:J1446" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1398" type="is:J1398" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1447" type="is:J1447" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1399" type="is:J1399" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1448" type="is:J1448" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1400" type="is:J1400" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1449" type="is:J1449" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1401" type="is:J1401" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1450" type="is:J1450" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1402" type="is:J1402" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1451" type="is:J1451" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1403" type="is:J1403" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1452" type="is:J1452" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1404" type="is:J1404" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1453" type="is:J1453" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1405" type="is:J1405" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1454" type="is:J1454" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1406" type="is:J1406" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1455" type="is:J1455" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1407" type="is:J1407" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1456" type="is:J1456" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1408" type="is:J1408" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1457" type="is:J1457" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1409" type="is:J1409" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1458" type="is:J1458" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1410" type="is:J1410" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1459" type="is:J1459" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="DataFlows">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="DataFlow" type="ds:DataFlow" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataFlows" type="ds:DataFlows"></xs:element>
+</xs:schema>

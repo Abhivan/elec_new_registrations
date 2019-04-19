@@ -1,0 +1,99 @@
+ZHV|F000000000|D0155001|X|INVE|{{.MO_ROLE}}|{{.MO_MPID}}|{{.TimeStamp}}||||OPER|
+{{- $flow_count := new 0}}
+{{- $group_count := new 0 }}
+{{- range .DataFromFile}}
+{{- $group_count := inc $group_count}}
+{{- $flow_count := inc $flow_count}}
+315|{{.MPAN}}|{{.START}}|{{.ADDRESS_1}}|{{.ADDRESS_2}}|{{.ADDRESS_3}}|{{.ADDRESS_4}}|{{.ADDRESS_5}}|{{.ADDRESS_6}}|{{.ADDRESS_7}}|{{.ADDRESS_8}}|{{.ADDRESS_9}}|{{.POST_CODE}}|{{.MOCONTREF}}|{{.RETRIEVALMETHOD}}|{{.GSP_ID}}|
+{{- $group_count := inc $group_count}}
+317|{{.START}}|
+{{- $group_count := inc $group_count}}
+318|{{.MOSERVREF}}|{{.MOSERVLEVREF}}|
+{{- end}}
+ZPT|F000000000|{{ $group_count.N }}||{{ $flow_count.N }}|{{.TimeStamp}}|
+
+{{/*
+
+Notes:
+
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" xmlns:is="http://www.electralink.co.uk/schemas/DTC/DataItems" xmlns:ds="http://www.electralink.co.uk/schemas/DTC/D0155001" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/D0155001">
+	<xs:import schemaLocation="Header.xsd" namespace="http://www.electralink.co.uk/schemas/Header"></xs:import>
+	<xs:import schemaLocation="DataItems.xsd" namespace="http://www.electralink.co.uk/schemas/DTC/DataItems"></xs:import>
+	<xs:complexType name="DataFlow">
+		<xs:sequence>
+			<xs:element name="G315_0315" type="ds:G156000" minOccurs="1" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="G156000">
+		<xs:sequence>
+			<xs:element name="J0003" type="is:J0003" minOccurs="1" maxOccurs="1"></xs:element> ** MPAN Core - INT(13) **
+			<xs:element name="J0049" type="is:J0049" minOccurs="1" maxOccurs="1"></xs:element> ** Effective from Settlement Date {REGI} - DATE **
+			<xs:element name="J1036" type="is:J1036" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 1 **
+			<xs:element name="J1037" type="is:J1037" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 2 **
+			<xs:element name="J1038" type="is:J1038" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 3 **
+			<xs:element name="J1039" type="is:J1039" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 4 **
+			<xs:element name="J1040" type="is:J1040" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 5 **
+			<xs:element name="J1041" type="is:J1041" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 6 **
+			<xs:element name="J1042" type="is:J1042" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 7 **
+			<xs:element name="J1043" type="is:J1043" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 8 **
+			<xs:element name="J1044" type="is:J1044" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Address Line 9 **
+			<xs:element name="J0263" type="is:J0263" minOccurs="0" maxOccurs="1"></xs:element> ** Metering Point Postcode **
+			<xs:element name="J0048" type="is:J0048" minOccurs="1" maxOccurs="1"></xs:element> ** Contract Reference - CHAR(10) **
+			<xs:element name="J0098" type="is:J0098" minOccurs="1" maxOccurs="1"></xs:element> ** Retrieval Method - CHAR(1) **
+			<xs:element name="J0066" type="is:J0066" minOccurs="1" maxOccurs="1"></xs:element> ** GSP Group Id - CHAR(2) **
+			<xs:element name="G320_0320" type="ds:G156050" minOccurs="0" maxOccurs="1"></xs:element> ** Regular Reading Cycle - CHAR(1) **
+			<xs:element name="G316_0316" type="ds:G156100" minOccurs="0" maxOccurs="1"></xs:element> ** Effective from Date {MOA} - DATE **
+			<xs:element name="G317_0317" type="ds:G156200" minOccurs="0" maxOccurs="1"></xs:element> ** Effective from Date {DCA} - DATE **
+			<xs:element name="G318_0318" type="ds:G156300" minOccurs="1" maxOccurs="unbounded"></xs:element> ** Service Reference ** / ** Service Level Reference **
+			<xs:element name="G22L_2122" type="ds:G593400" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="true"/>
+	</xs:complexType>
+	<xs:complexType name="G156050">
+		<xs:sequence>
+			<xs:element name="J0277" type="is:J0277" minOccurs="1" maxOccurs="1"></xs:element> ** Regular Reading Cycle - CHAR(1) **
+			<xs:element name="J0696" type="is:J0696" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G156100">
+		<xs:sequence>
+			<xs:element name="J0219" type="is:J0219" minOccurs="1" maxOccurs="1"></xs:element> ** Effective from Date {MOA} - DATE **
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G156200">
+		<xs:sequence>
+			<xs:element name="J0210" type="is:J0210" minOccurs="1" maxOccurs="1"></xs:element> ** Effective from Date {DCA} - DATE **
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G156300">
+		<xs:sequence>
+			<xs:element name="J0274" type="is:J0274" minOccurs="1" maxOccurs="1"></xs:element> ** Service Reference **
+			<xs:element name="J0275" type="is:J0275" minOccurs="1" maxOccurs="1"></xs:element> ** Service Level Reference **
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G593400">
+		<xs:sequence>
+			<xs:element name="J2177" type="is:J2177" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="DataFlows">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="DataFlow" type="ds:DataFlow" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataFlows" type="ds:DataFlows"></xs:element>
+</xs:schema>
+*/}}

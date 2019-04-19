@@ -1,0 +1,760 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/LogicalTypes">
+	<xs:simpleType name="char_4">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="4"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_2">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="2"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_3">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="3"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_11">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="11"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_12">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="12"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_1">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="1"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_16">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="16"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_13">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="13"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_250">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="250"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_8">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="8"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_200">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="200"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_25">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="25"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_60">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="60"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_40">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="40"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_19">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="19"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_50">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="50"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_17">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="17"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_23">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="23"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_80">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="80"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_14">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="14"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_120">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="120"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_20">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="20"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_7">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="7"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_255">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="255"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_10">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="10"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_9">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="9"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_39">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="39"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_6">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="6"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_100">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="100"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_32">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="32"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_18">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="18"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_35">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="35"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_30">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="30"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_5">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"></xs:minLength>
+			<xs:maxLength value="5"></xs:maxLength>
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;'&quot;]*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-99999.99"></xs:minInclusive>
+			<xs:maxInclusive value="99999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_3_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="3"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="000"></xs:minInclusive>
+			<xs:maxInclusive value="999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="0000000"></xs:minInclusive>
+			<xs:maxInclusive value="9999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_2_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="2"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="00"></xs:minInclusive>
+			<xs:maxInclusive value="99"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_4_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="4"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-99.99"></xs:minInclusive>
+			<xs:maxInclusive value="99.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="0000000000000"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_6_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="6"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="000000"></xs:minInclusive>
+			<xs:maxInclusive value="999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_3">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="00000.000"></xs:minInclusive>
+			<xs:maxInclusive value="99999.999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_6_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="6"></xs:fractionDigits>
+			<xs:minInclusive value="-99.999999"></xs:minInclusive>
+			<xs:maxInclusive value="99.999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{6}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_6_3">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="6"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="000.000"></xs:minInclusive>
+			<xs:maxInclusive value="999.999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_5_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="5"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-999.99"></xs:minInclusive>
+			<xs:maxInclusive value="999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_11_6_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="11"></xs:totalDigits>
+			<xs:fractionDigits value="6"></xs:fractionDigits>
+			<xs:minInclusive value="-99999.999999"></xs:minInclusive>
+			<xs:maxInclusive value="99999.999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{6}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_10_9_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="10"></xs:totalDigits>
+			<xs:fractionDigits value="9"></xs:fractionDigits>
+			<xs:minInclusive value="-9.999999999"></xs:minInclusive>
+			<xs:maxInclusive value="9.999999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{9}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_4_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="4"></xs:fractionDigits>
+			<xs:minInclusive value="-99999999.9999"></xs:minInclusive>
+			<xs:maxInclusive value="99999999.9999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{4}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_4_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="4"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="0000"></xs:minInclusive>
+			<xs:maxInclusive value="9999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_1_0_1">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="1"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="-9"></xs:minInclusive>
+			<xs:maxInclusive value="9"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_7">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="7"></xs:fractionDigits>
+			<xs:minInclusive value="0.0000000"></xs:minInclusive>
+			<xs:maxInclusive value="9.9999999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{7}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999.99"></xs:minInclusive>
+			<xs:maxInclusive value="9999999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_4">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="4"></xs:fractionDigits>
+			<xs:minInclusive value="0000000000.0000"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.9999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{4}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_11_6">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="11"></xs:totalDigits>
+			<xs:fractionDigits value="6"></xs:fractionDigits>
+			<xs:minInclusive value="00000.000000"></xs:minInclusive>
+			<xs:maxInclusive value="99999.999999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{6}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999.9"></xs:minInclusive>
+			<xs:maxInclusive value="9999999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-99999999999.9"></xs:minInclusive>
+			<xs:maxInclusive value="99999999999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_3_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999999.999"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="000000000000"></xs:minInclusive>
+			<xs:maxInclusive value="999999999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_13_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="13"></xs:fractionDigits>
+			<xs:minInclusive value="-9.9999999999999"></xs:minInclusive>
+			<xs:maxInclusive value="9.9999999999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{13}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="00000000000.0"></xs:minInclusive>
+			<xs:maxInclusive value="99999999999.9"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-99999999999.99"></xs:minInclusive>
+			<xs:maxInclusive value="99999999999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_6">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="6"></xs:fractionDigits>
+			<xs:minInclusive value="000.000000"></xs:minInclusive>
+			<xs:maxInclusive value="999.999999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{6}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_13_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="13"></xs:fractionDigits>
+			<xs:minInclusive value="-.9999999999999"></xs:minInclusive>
+			<xs:maxInclusive value=".9999999999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{13}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_10_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="0000000000"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="0000000000.00"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_4_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="4"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-999.9"></xs:minInclusive>
+			<xs:maxInclusive value="999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-999999.9"></xs:minInclusive>
+			<xs:maxInclusive value="999999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_6_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="6"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="0000.00"></xs:minInclusive>
+			<xs:maxInclusive value="9999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="000000000000.00"></xs:minInclusive>
+			<xs:maxInclusive value="999999999999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-999999999999.99"></xs:minInclusive>
+			<xs:maxInclusive value="999999999999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="00000.00"></xs:minInclusive>
+			<xs:maxInclusive value="99999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_18_9_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="18"></xs:totalDigits>
+			<xs:fractionDigits value="9"></xs:fractionDigits>
+			<xs:minInclusive value="-999999999.999999999"></xs:minInclusive>
+			<xs:maxInclusive value="999999999.999999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{9}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_3">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="0000000000.000"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_3_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="-999999.999"></xs:minInclusive>
+			<xs:maxInclusive value="999999.999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_4">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="4"></xs:fractionDigits>
+			<xs:minInclusive value="0000.0000"></xs:minInclusive>
+			<xs:maxInclusive value="9999.9999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{4}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_6_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="6"></xs:fractionDigits>
+			<xs:minInclusive value="-9.999999"></xs:minInclusive>
+			<xs:maxInclusive value="9.999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{6}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_9_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="9"></xs:fractionDigits>
+			<xs:minInclusive value="-999.999999999"></xs:minInclusive>
+			<xs:maxInclusive value="999.999999999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{9}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_13_4_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="13"></xs:totalDigits>
+			<xs:fractionDigits value="4"></xs:fractionDigits>
+			<xs:minInclusive value="-999999999.9999"></xs:minInclusive>
+			<xs:maxInclusive value="999999999.9999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{4}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_5_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="5"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="00000"></xs:minInclusive>
+			<xs:maxInclusive value="99999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="00000000"></xs:minInclusive>
+			<xs:maxInclusive value="99999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="00000000.0"></xs:minInclusive>
+			<xs:maxInclusive value="99999999.9"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-99999999.9"></xs:minInclusive>
+			<xs:maxInclusive value="99999999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_1_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999999999.9"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999999.9"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_3_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="-999999999.999"></xs:minInclusive>
+			<xs:maxInclusive value="999999999.999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_7_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="7"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
+			<xs:minInclusive value="000000.0"></xs:minInclusive>
+			<xs:maxInclusive value="999999.9"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{1}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_5_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="5"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="000.00"></xs:minInclusive>
+			<xs:maxInclusive value="999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_1_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="1"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="0"></xs:minInclusive>
+			<xs:maxInclusive value="9"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_9_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="0000000.00"></xs:minInclusive>
+			<xs:maxInclusive value="9999999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_4_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="4"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="00.00"></xs:minInclusive>
+			<xs:maxInclusive value="99.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_12_2_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999999.99"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.99"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_14_4_1">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"></xs:totalDigits>
+			<xs:fractionDigits value="4"></xs:fractionDigits>
+			<xs:minInclusive value="-9999999999.9999"></xs:minInclusive>
+			<xs:maxInclusive value="9999999999.9999"></xs:maxInclusive>
+			<xs:pattern value="-?\d+\.\d{4}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_8_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"></xs:totalDigits>
+			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:minInclusive value="000000.00"></xs:minInclusive>
+			<xs:maxInclusive value="999999.99"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{2}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_5_3">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="5"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+			<xs:minInclusive value="00.000"></xs:minInclusive>
+			<xs:maxInclusive value="99.999"></xs:maxInclusive>
+			<xs:pattern value="\d+\.\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

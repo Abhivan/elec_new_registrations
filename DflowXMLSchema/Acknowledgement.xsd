@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ac="http://www.electralink.co.uk/schemas/A0003" xmlns:ns="http://www.electralink.co.uk/schemas/Header"
+	elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/A0003">
+	<xs:import namespace="http://www.electralink.co.uk/schemas/Header" schemaLocation="Header.xsd" />
+	<xs:simpleType name="char_1">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="1" />
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_2">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="2" />
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_8">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="8" />
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_10">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="10" />
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="char_2048">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="2048" />
+			<xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="num_6_0">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="6"></xs:totalDigits>
+			<xs:fractionDigits value="0"></xs:fractionDigits>
+			<xs:minInclusive value="000000"></xs:minInclusive>
+			<xs:maxInclusive value="999999"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Error">
+		<xs:sequence>
+			<xs:element name="LineNo" type="ac:num_6_0" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ColumnNo" type="ac:num_6_0" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ErrorDesc" type="ac:char_2048" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Errors">
+		<xs:sequence>
+			<xs:element name="Error" type="ac:Error" minOccurs="1" 
+				maxOccurs="100" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="acknowledgement">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="FlowOriginator" type="ac:char_1"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="OriginalFlowRef" type="ac:char_8"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="OriginalFileId" type="ac:char_10"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="ActionTaken" type="ac:char_1" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ErrorClass" type="ac:char_2" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ErrorClassDescription" type="ac:char_2048"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="Errors" type="ac:Errors" minOccurs="0"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Acknowledgement" type="ac:acknowledgement"></xs:element>
+</xs:schema>   

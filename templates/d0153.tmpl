@@ -1,0 +1,54 @@
+ZHV|F000000000|D0153001|X|INVE|{{.DA_ROLE}}|{{.DA_MPID}}|{{.TimeStamp}}||||OPER|
+{{- $flow_count := new 0}}
+{{- $group_count := new 0 }}
+{{- range .DataFromFile}}
+{{- $group_count := inc $group_count}}
+{{- $flow_count := inc $flow_count}}
+312|{{.MPAN}}|{{.START}}|{{.START}}|{{.DACONTREF}}||
+{{- $group_count := inc $group_count}}
+313|{{.DASERVREF}}|{{.DASERVLEVREF}}|
+{{- end}}
+ZPT|F000000000|{{ $group_count.N }}||{{ $flow_count.N }}||{{.TimeStamp}}|
+
+{{/*
+
+Notes: We have to send this file separately to DA depending on DA Role HH/NHH, Role A/B
+
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" xmlns:is="http://www.electralink.co.uk/schemas/DTC/DataItems" xmlns:ds="http://www.electralink.co.uk/schemas/DTC/D0153001" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/D0153001">
+	<xs:import schemaLocation="Header.xsd" namespace="http://www.electralink.co.uk/schemas/Header"></xs:import>
+	<xs:import schemaLocation="DataItems.xsd" namespace="http://www.electralink.co.uk/schemas/DTC/DataItems"></xs:import>
+	<xs:complexType name="DataFlow">
+		<xs:sequence>
+			<xs:element name="G312_0312" type="ds:G152000" minOccurs="1" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="G152000">
+		<xs:sequence>
+			<xs:element name="J0003" type="is:J0003" minOccurs="1" maxOccurs="1"></xs:element> ** MPAN Core - INT(13) **
+			<xs:element name="J0334" type="is:J0334" minOccurs="1" maxOccurs="1"></xs:element> ** Effective from Settlement Date {DDA} - DATE (8) **
+			<xs:element name="J0049" type="is:J0049" minOccurs="1" maxOccurs="1"></xs:element> ** Effective from Settlement Date {REGI} - DATE (8) **
+			<xs:element name="J0048" type="is:J0048" minOccurs="1" maxOccurs="1"></xs:element> ** Contract Reference - CHAR(10) **
+			<xs:element name="J0012" type="is:J0012" minOccurs="0" maxOccurs="1"></xs:element> ** Additional Information - CHAR(200) **
+			<xs:element name="G313_0313" type="ds:G152100" minOccurs="1" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="true"/>
+	</xs:complexType>
+	<xs:complexType name="G152100">
+		<xs:sequence>
+			<xs:element name="J0274" type="is:J0274" minOccurs="1" maxOccurs="1"></xs:element> ** Service Reference - CHAR(4) **
+			<xs:element name="J0275" type="is:J0275" minOccurs="1" maxOccurs="1"></xs:element> ** Service Level Reference - CHAR(4) **
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="DataFlows">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="DataFlow" type="ds:DataFlow" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataFlows" type="ds:DataFlows"></xs:element>
+</xs:schema>
+*/}}

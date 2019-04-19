@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" xmlns:is="http://www.electralink.co.uk/schemas/DTC/DataItems" xmlns:ds="http://www.electralink.co.uk/schemas/DTC/D0215001" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/D0215001">
+	<xs:import schemaLocation="Header.xsd" namespace="http://www.electralink.co.uk/schemas/Header"></xs:import>
+	<xs:import schemaLocation="DataItems.xsd" namespace="http://www.electralink.co.uk/schemas/DTC/DataItems"></xs:import>
+	<xs:complexType name="DataFlow">
+		<xs:sequence>
+			<xs:element name="G490_0490" type="ds:G256000" minOccurs="1" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="G256000">
+		<xs:sequence>
+			<xs:element name="J0003" type="is:J0003" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0443" type="is:J0443" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0456" type="is:J0456" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0427" type="is:J0427" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0454" type="is:J0454" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J0505" type="is:J0505" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J0506" type="is:J0506" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J0455" type="is:J0455" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J0677" type="is:J0677" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J0678" type="is:J0678" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="J1025" type="is:J1025" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="true"/>
+	</xs:complexType>
+	<xs:complexType name="DataFlows">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="DataFlow" type="ds:DataFlow" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataFlows" type="ds:DataFlows"></xs:element>
+</xs:schema>

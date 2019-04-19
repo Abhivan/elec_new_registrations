@@ -1,0 +1,6 @@
+DBHOST=localhost
+DBPORT=5432
+DBUSER=elec_reg_user
+DBPASS=elec_reg_password
+DBNAME=elec_reg_database
+ECOES_API_KEY=

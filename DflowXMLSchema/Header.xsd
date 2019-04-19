@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/Header">
+  <xs:simpleType name="char_1">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/> 
+      <xs:maxLength value="1"/>
+      <xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="char_3">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+      <xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>	
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="char_4">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="4"/>
+      <xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="char_5">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="5"/>
+      <xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="char_10">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+      <xs:pattern value="[A-Za-z0-9 ,:=!%;_@/\.\-\(\)\+\?\*&lt;&gt;&amp;&apos;&quot;]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Header">
+    <xs:sequence>
+      <xs:element name="Flow" type="ns:char_5" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="FlowVersion" type="ns:char_3" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="UserFileID" type="ns:char_10" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="FromMarketRole" type="ns:char_1" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="FromMarketID" type="ns:char_4" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ToMarketRole" type="ns:char_1" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ToMarketID" type="ns:char_4" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="CreationDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SendingAppID" type="ns:char_5" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ReceivingAppID" type="ns:char_5" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Broadcast" type="ns:char_1" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TestFlag" type="ns:char_4" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+      

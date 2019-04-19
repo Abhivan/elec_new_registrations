@@ -1,0 +1,17 @@
+ZHV|F000000000|D0148001|X|INVE|{{.MO_ROLE}}|{{.MO_MPID}}|{{.TimeStamp}}||||OPER|
+{{- $flow_count := new 0}}
+{{- $group_count := new 0 }}
+{{- range .DataFromFile}}
+{{- $group_count := inc $group_count}}
+{{- $flow_count := inc $flow_count}}
+270|{{.MPAN}}|{{.START}}|
+{{- $group_count := inc $group_count}}
+271|{{.DCAGENT}}|N|
+{{- $group_count := inc $group_count}}
+272|{{.START}}|
+{{- $group_count := inc $group_count}}
+274|{{.MOAGENT}}|O|
+{{- $group_count := inc $group_count}}
+276|{{.EndDate}}|
+{{- end}}
+ZPT|F000000000|{{ $group_count.N }}||{{ $flow_count.N }}|{{.TimeStamp}}|

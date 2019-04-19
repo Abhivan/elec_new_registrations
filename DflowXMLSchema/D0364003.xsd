@@ -1,0 +1,228 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://www.electralink.co.uk/schemas/Header" xmlns:is="http://www.electralink.co.uk/schemas/DTC/DataItems" xmlns:ds="http://www.electralink.co.uk/schemas/DTC/D0364003" elementFormDefault="unqualified" targetNamespace="http://www.electralink.co.uk/schemas/DTC/D0364003">
+	<xs:import schemaLocation="Header.xsd" namespace="http://www.electralink.co.uk/schemas/Header"></xs:import>
+	<xs:import schemaLocation="DataItems.xsd" namespace="http://www.electralink.co.uk/schemas/DTC/DataItems"></xs:import>
+	<xs:complexType name="DataFlow">
+		<xs:sequence>
+			<xs:element name="G71I_2130" type="ds:G594200" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G72I_2131" type="ds:G594300" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G75I_2134" type="ds:G594600" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G78I_2137" type="ds:G594900" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G81I_2140" type="ds:G595200" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G48L_2148" type="ds:G595500" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G84I_2143" type="ds:G595700" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G75J_2145" type="ds:G596000" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="G49L_2149" type="ds:G596100" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="G594200">
+		<xs:sequence>
+			<xs:element name="J1889" type="is:J1889" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1950" type="is:J1950" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1949" type="is:J1949" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1951" type="is:J1951" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1952" type="is:J1952" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="true"/>
+	</xs:complexType>
+	<xs:complexType name="G594300">
+		<xs:sequence>
+			<xs:element name="J1923" type="is:J1923" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2043" type="is:J2043" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1996" type="is:J1996" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1999" type="is:J1999" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1993" type="is:J1993" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1992" type="is:J1992" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2015" type="is:J2015" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1972" type="is:J1972" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G73I_2132" type="ds:G594400" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594400">
+		<xs:sequence>
+			<xs:element name="J0073" type="is:J0073" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0146" type="is:J0146" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1937" type="is:J1937" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1938" type="is:J1938" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G74I_2133" type="ds:G594500" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594500">
+		<xs:sequence>
+			<xs:element name="J0074" type="is:J0074" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1984" type="is:J1984" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1985" type="is:J1985" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594600">
+		<xs:sequence>
+			<xs:element name="J1923" type="is:J1923" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2029" type="is:J2029" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2009" type="is:J2009" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2031" type="is:J2031" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1993" type="is:J1993" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1992" type="is:J1992" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1901" type="is:J1901" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1972" type="is:J1972" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G76I_2135" type="ds:G594700" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G46L_2146" type="ds:G595800" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594700">
+		<xs:sequence>
+			<xs:element name="J0073" type="is:J0073" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0146" type="is:J0146" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1937" type="is:J1937" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1938" type="is:J1938" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G77I_2136" type="ds:G594800" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594800">
+		<xs:sequence>
+			<xs:element name="J0074" type="is:J0074" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1984" type="is:J1984" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1985" type="is:J1985" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G594900">
+		<xs:sequence>
+			<xs:element name="J1942" type="is:J1942" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2061" type="is:J2061" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2044" type="is:J2044" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2035" type="is:J2035" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2186" type="is:J2186" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2187" type="is:J2187" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1980" type="is:J1980" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1972" type="is:J1972" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595200">
+		<xs:sequence>
+			<xs:element name="J1893" type="is:J1893" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1941" type="is:J1941" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1996" type="is:J1996" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1999" type="is:J1999" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1993" type="is:J1993" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1992" type="is:J1992" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2008" type="is:J2008" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G82I_2141" type="ds:G595300" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="G47L_2147" type="ds:G595900" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595300">
+		<xs:sequence>
+			<xs:element name="J0073" type="is:J0073" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J0146" type="is:J0146" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1937" type="is:J1937" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1938" type="is:J1938" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G83I_2142" type="ds:G595400" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595400">
+		<xs:sequence>
+			<xs:element name="J0074" type="is:J0074" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1984" type="is:J1984" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1985" type="is:J1985" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595500">
+		<xs:sequence>
+			<xs:element name="J1923" type="is:J1923" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2188" type="is:J2188" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2189" type="is:J2189" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2190" type="is:J2190" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2191" type="is:J2191" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1972" type="is:J1972" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595600">
+		<xs:sequence>
+			<xs:element name="J1958" type="is:J1958" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1957" type="is:J1957" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595700">
+		<xs:sequence>
+			<xs:element name="J1950" type="is:J1950" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1949" type="is:J1949" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1893" type="is:J1893" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1955" type="is:J1955" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1956" type="is:J1956" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J1954" type="is:J1954" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="G85I_2144" type="ds:G595600" minOccurs="1" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595800">
+		<xs:sequence>
+			<xs:element name="J1923" type="is:J1923" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2184" type="is:J2184" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2185" type="is:J2185" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G595900">
+		<xs:sequence>
+			<xs:element name="J1923" type="is:J1923" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2184" type="is:J2184" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2185" type="is:J2185" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G596000">
+		<xs:sequence>
+			<xs:element name="J2073" type="is:J2073" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2074" type="is:J2074" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2076" type="is:J2076" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2075" type="is:J2075" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2072" type="is:J2072" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="G596100">
+		<xs:sequence>
+			<xs:element name="J2192" type="is:J2192" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2193" type="is:J2193" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2194" type="is:J2194" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="J2195" type="is:J2195" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="isGroupElement" type="xs:boolean" fixed="true"/>
+		<xs:attribute name="isFlowGroup" type="xs:boolean" fixed="false"/>
+	</xs:complexType>
+	<xs:complexType name="DataFlows">
+		<xs:sequence>
+			<xs:element name="Header" type="ns:Header" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="DataFlow" type="ds:DataFlow" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataFlows" type="ds:DataFlows"></xs:element>
+</xs:schema>
